@@ -1,0 +1,10 @@
+<% @clients.each do |client|%>
+    <p>
+        <%= client.name %>
+        <%= link_to "edit", edit_client_path(client) %>
+        <%= link_to "Show", client %>
+        <%= link_to "delete", client_path(client), method: :delete %>
+    </p>
+
+<% end %>
+<%= link_to "NEW", new_client_path %>
